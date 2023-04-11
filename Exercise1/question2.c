@@ -22,13 +22,13 @@ double cpu_time_taken;
 start = clock();
 
 //Summing code here
-int sum = 0;
 for(int i = 0 ; i<MAX_NO_OF_ELEMENTS; i++){
     sum += i;
 }
 
-//Time calculations here
-cpu_time_taken = end - start;
+//Time calculations here]
+end = clock();
+cpu_time_taken = ((double) (end - start)) / CLOCKS_PER_SEC;
 
 printf("Total sum: %lld\n", sum);
 printf("Time taken to sum all the numbers are %lf\n", cpu_time_taken);
